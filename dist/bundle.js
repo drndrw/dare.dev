@@ -28624,7 +28624,9 @@ __webpack_require__(/*! ./styles/style.scss */ "./src/styles/style.scss");
 function App() {
   return React.createElement("div", null, React.createElement("h1", {
     className: "h3"
-  }, "Hello"), React.createElement("p", null, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
+  }, "Hello"), React.createElement("p", null, "Lorem ipsum dolor sit ", React.createElement("a", {
+    href: "/"
+  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
 }
 
 ReactDOM.render(React.createElement(App, null), document.getElementById("app"));

@@ -20,6 +20,14 @@ a, p {
   line-height: map-get($sizes, xs) * 1.5;
 }
 
+a {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 @media (min-width: map-get($breakpoints, m)) {
   h1, .h1 {
     font-size: map-get($sizes, l);
