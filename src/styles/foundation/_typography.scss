@@ -1,9 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import 'sizing';
+@import 'colors';
 
 body {
   font-family: 'Space Mono', monospace;
 }
 
-h1 {
+a, p, span, h1, h2, h3, h4, h5, h6 {
   color: $white;
+  margin: map-get($sizes, xs) 0;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: 700;
+}
+
+a, p {
+  font-size: map-get($sizes, xs);
+  line-height: map-get($sizes, xs) * 1.5;
+}
+
+@media (min-width: map-get($breakpoints, m)) {
+  h1, .h1 {
+    font-size: map-get($sizes, l);
+    line-height: map-get($sizes, l) * 1.25;
+  }
+
+  h2, .h2 {
+    font-size: map-get($sizes, lm);
+    line-height: map-get($sizes, lm) * 1.25;
+  }
+
+  h3, .h3 {
+    font-size: map-get($sizes, m);
+    line-height: map-get($sizes, m) * 1.25;
+  }
+
+  h4, .h4 {
+    font-size: map-get($sizes, sm);
+    line-height: map-get($sizes, sm) * 1.25;
+  }
+
+  h5, .h5 {
+    font-size: map-get($sizes, s);
+    line-height: map-get($sizes, s) * 1.25;
+  }
+
+  h6, .h6 {
+    font-size: map-get($sizes, xs);
+    line-height: map-get($sizes, xs) * 1.25;
+  }
+}
+
+@media (max-width: map-get($breakpoints, m)) {
+  h1, .h1 {
+    font-size: map-get($sizes, lm);
+    line-height: map-get($sizes, lm) * 1.25;
+  }
+
+  h2, .h2 {
+    font-size: map-get($sizes, m);
+    line-height: map-get($sizes, m) * 1.25;
+  }
+
+  h3, .h3 {
+    font-size: map-get($sizes, sm);
+    line-height: map-get($sizes, sm) * 1.25;
+  }
+
+  h4, .h4 {
+    font-size: map-get($sizes, s);
+    line-height: map-get($sizes, s) * 1.25;
+  }
+
+  h5, .h5 {
+    font-size: map-get($sizes, xs);
+    line-height: map-get($sizes, xs) * 1.25;
+  }
+
+  h6, .h6 {
+    font-size: map-get($sizes, xs);
+    line-height: map-get($sizes, xs) * 1.25;
+  }
 }
