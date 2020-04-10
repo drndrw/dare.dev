@@ -2,6 +2,14 @@
   background-color: #021859;
   margin: 0; }
 
+@media (min-width: 768px) {
+  .wrapper {
+    padding-top: 72px; } }
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding-top: 64px; } }
+
 body {
   font-family: 'Space Mono', monospace; }
 
@@ -60,5 +68,23 @@ a {
   h6, .h6 {
     font-size: 16px;
     line-height: 20px; } }
+
+nav {
+  position: fixed;
+  background-color: #021859;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  nav span {
+    margin: 0; }
+
+@media (min-width: 768px) {
+  nav {
+    height: 72px; } }
+
+@media (max-width: 768px) {
+  nav {
+    height: 64px; } }
 
 /*# sourceMappingURL=style.css.map*/

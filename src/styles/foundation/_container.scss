@@ -1,4 +1,18 @@
+@import '../foundation/sizing';
+
 body {
   background-color: $background;
   margin: 0;
+}
+
+@media (min-width: map-get($breakpoints, m)) {
+  .wrapper {
+    padding-top: map-get($sizes, xxl);
+  }
+}
+
+@media (max-width: map-get($breakpoints, m)) {
+  .wrapper {
+    padding-top: map-get($sizes, xl);
+  }
 }

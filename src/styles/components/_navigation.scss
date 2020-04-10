@@ -1,0 +1,27 @@
+@import '../foundation/colors';
+@import '../foundation/sizing';
+
+nav {
+  position: fixed;
+  background-color: $background;
+  width: 100%;
+  max-width: map-get($breakpoints, xl);
+  margin-left: auto;
+  margin-right: auto;
+
+  & span {
+    margin: 0;
+  }
+}
+
+@media (min-width: map-get($breakpoints, m)) {
+  nav {
+    height: map-get($sizes, xxl);
+  }
+}
+
+@media (max-width: map-get($breakpoints, m)) {
+  nav {
+    height: map-get($sizes, xl);
+  }
+}
