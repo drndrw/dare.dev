@@ -1,4 +1,42 @@
+@import '../foundation/sizing';
+
 body {
   background-color: $background;
   margin: 0;
+}
+
+.container {
+  max-width: map-get($breakpoints, xl);
+  width: 100%;
+
+  &.flex {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: map-get($breakpoints, xl)) {
+  .container, .wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: map-get($breakpoints, xl)) {
+  .container {
+    padding-left: map-get($sizes, s);
+    padding-right: map-get($sizes, s);
+  }
+}
+
+@media (min-width: map-get($breakpoints, m)) {
+  .wrapper {
+    padding-top: map-get($sizes, xxl);
+  }
+}
+
+@media (max-width: map-get($breakpoints, m)) {
+  .wrapper {
+    padding-top: map-get($sizes, xl);
+  }
 }

@@ -28601,6 +28601,90 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./src/components/hamburger.tsx":
+/*!**************************************!*\
+  !*** ./src/components/hamburger.tsx ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+function Hamburger() {
+  var _React$useState = React.useState(undefined),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      open = _React$useState2[0],
+      setOpen = _React$useState2[1];
+
+  return React.createElement("div", {
+    className: "hamburger" + (open ? ' ' + open : ''),
+    onClick: function onClick() {
+      return open ? setOpen(undefined) : setOpen('open');
+    }
+  }, React.createElement("div", {
+    className: "hamburger-line top"
+  }), React.createElement("div", {
+    className: "hamburger-line bottom"
+  }));
+}
+
+exports.default = Hamburger;
+
+/***/ }),
+
+/***/ "./src/components/header.tsx":
+/*!***********************************!*\
+  !*** ./src/components/header.tsx ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var hamburger_1 = __webpack_require__(/*! ./hamburger */ "./src/components/hamburger.tsx");
+
+function Header() {
+  return React.createElement("nav", null, React.createElement("div", {
+    className: "container flex"
+  }, React.createElement("div", {
+    className: "left"
+  }, React.createElement("span", {
+    className: "h3"
+  }, "DaRe")), React.createElement("div", {
+    className: "right"
+  }, React.createElement(hamburger_1.default, null))));
+}
+
+exports.default = Header;
+
+/***/ }),
+
 /***/ "./src/index.tsx":
 /*!***********************!*\
   !*** ./src/index.tsx ***!
@@ -28619,17 +28703,31 @@ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 
+var header_1 = __webpack_require__(/*! ./components/header */ "./src/components/header.tsx");
+
 __webpack_require__(/*! ./styles/style.scss */ "./src/styles/style.scss");
 
 function App() {
-  return React.createElement("div", null, React.createElement("h1", {
-    className: "h3"
-  }, "Hello"), React.createElement("p", null, "Lorem ipsum dolor sit ", React.createElement("a", {
+  return React.createElement(React.Fragment, null, React.createElement(header_1.default, null), React.createElement("div", {
+    className: "wrapper"
+  }, React.createElement("p", null, "Lorem ipsum dolor sit ", React.createElement("a", {
     href: "/"
-  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
+  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), React.createElement("p", null, "Lorem ipsum dolor sit ", React.createElement("a", {
+    href: "/"
+  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), React.createElement("p", null, "Lorem ipsum dolor sit ", React.createElement("a", {
+    href: "/"
+  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), React.createElement("p", null, "Lorem ipsum dolor sit ", React.createElement("a", {
+    href: "/"
+  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), React.createElement("p", null, "Lorem ipsum dolor sit ", React.createElement("a", {
+    href: "/"
+  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), React.createElement("p", null, "Lorem ipsum dolor sit ", React.createElement("a", {
+    href: "/"
+  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), React.createElement("p", null, "Lorem ipsum dolor sit ", React.createElement("a", {
+    href: "/"
+  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")));
 }
 
-ReactDOM.render(React.createElement(App, null), document.getElementById("app"));
+ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
 
 /***/ }),
 

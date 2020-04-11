@@ -1,0 +1,38 @@
+@import '../foundation/colors';
+@import '../foundation/sizing';
+
+nav {
+  position: fixed;
+  background-color: $background;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  & span {
+    margin: 0;
+  }
+
+  & .container {
+    & .left, .right {
+      display: flex;
+      align-items: center;
+      flex: 50%;
+    }
+
+    & .right {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+@media (min-width: map-get($breakpoints, m)) {
+  nav {
+    height: map-get($sizes, xxl);
+  }
+}
+
+@media (max-width: map-get($breakpoints, m)) {
+  nav {
+    height: map-get($sizes, xl);
+  }
+}
