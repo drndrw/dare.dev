@@ -1,0 +1,89 @@
+@import '../foundation/sizing';
+@import '../foundation/colors';
+
+@mixin transition($rotate: 0deg, $translateY: 0px) {
+  @if $translateY == 0px {
+    -webkit-transform: rotate($rotate);
+    -moz-transform: rotate($rotate);
+    -o-transform: rotate($rotate);
+    transform: rotate($rotate);
+  } @else {
+    -webkit-transform: translateY($translateY) rotate($rotate);
+    -moz-transform: translateY($translateY) rotate($rotate);
+    -o-transform: translateY($translateY) rotate($rotate);
+    transform: translateY($translateY) rotate($rotate);
+  }
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+.hamburger {
+  cursor: pointer;
+  @include transition();
+
+  &-line {
+    height: map-get($sizes, xxxs);
+    background-color: $white;
+
+    &.top {
+      @include transition();
+    }
+
+    &.bottom {
+      @include transition();
+    }
+  }
+}
+
+.hamburger.open {
+  transform: translateY(-6px);
+  
+  & .hamburger-line {
+    &.top {
+      @include transition(45deg, map-get($sizes, xxs) + map-get($sizes, xxxs));
+    }
+    &.bottom {
+      @include transition(-45deg);
+    }
+  }
+}
+
+@media (min-width: map-get($breakpoints, m)) {
+  .hamburger {
+    height: map-get($sizes, m);
+    width: map-get($sizes, m);
+
+    &-line {
+
+      &.top {
+        margin-top: map-get($sizes, xxs) + map-get($sizes, xxxs);
+        margin-bottom: map-get($sizes, xxs);
+      }
+
+      &.bottom {
+        margin-bottom: map-get($sizes, xxs) + map-get($sizes, xxxs);
+      }
+    }
+  }
+}
+
+@media (max-width: map-get($breakpoints, m)) {
+  .hamburger {
+    height: map-get($sizes, sm);
+    width: map-get($sizes, sm);
+
+    &-line {
+
+      &.top {
+        margin-top: map-get($sizes, xxs);
+        margin-bottom: map-get($sizes, xxs);
+      }
+
+      &.bottom {
+        margin-bottom: map-get($sizes, xxs);
+      }
+    }
+  }
+}
