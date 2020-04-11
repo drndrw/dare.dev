@@ -1,8 +1,8 @@
-import * as React from "react";
+import React, { useState } from "react";
 
 export default function Hamburger() {
 
-  const [open, setOpen] = React.useState<string | undefined>(undefined);
+  const [open, setOpen] = useState<string | undefined>(undefined);
 
   return (
     <div className={"hamburger" + (open ? ' ' + open : '')} onClick={() => open ? setOpen(undefined) : setOpen('open')}>

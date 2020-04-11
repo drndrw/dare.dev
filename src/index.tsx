@@ -4,8 +4,11 @@ import * as ReactDOM from "react-dom";
 import Header from "./components/header";
 
 import "./styles/style.scss";
+import { reduxStore } from './store';
+import { Provider } from 'react-redux';
 
 function App() {
+  console.log(reduxStore.getState())
   return (
     <>
       <Header />
@@ -22,4 +25,7 @@ function App() {
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(
+  <Provider store={reduxStore}>
+    <App />
+  </Provider>, document.getElementById('app'))
