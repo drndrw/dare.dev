@@ -38,8 +38,8 @@
 }
 
 .hamburger.open {
-  transform: translateY(-6px);
-  
+  transform: translateY(-((map-get($sizes, xxs) + map-get($sizes, xxxs))/ 2));
+
   & .hamburger-line {
     &.top {
       @include transition(45deg, map-get($sizes, xxs) + map-get($sizes, xxxs));
