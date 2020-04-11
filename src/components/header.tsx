@@ -2,7 +2,7 @@ import * as React from "react";
 
 import Hamburger from "./hamburger";
 
-export default function Header() {
+export default function Header(props: any) {
   return (
     <nav>
       <div className="container flex">
@@ -10,7 +10,7 @@ export default function Header() {
           <span className="h3">DaRe</span>
         </div>
         <div className="right">
-          <Hamburger />
+          <Hamburger {...props} />
         </div>
       </div>
     </nav>

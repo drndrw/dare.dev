@@ -32138,12 +32138,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-function Hamburger() {
+var react_redux_1 = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+
+function Hamburger(props) {
+  var dispatch = react_redux_1.useDispatch();
+
   var _react_1$useState = react_1.useState(undefined),
       _react_1$useState2 = _slicedToArray(_react_1$useState, 2),
       open = _react_1$useState2[0],
       setOpen = _react_1$useState2[1];
 
+  console.log(props.navState);
   return react_1.default.createElement("div", {
     className: "hamburger" + (open ? ' ' + open : ''),
     onClick: function onClick() {
@@ -32194,7 +32199,7 @@ var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/
 
 var hamburger_1 = __importDefault(__webpack_require__(/*! ./hamburger */ "./src/components/hamburger.tsx"));
 
-function Header() {
+function Header(props) {
   return React.createElement("nav", null, React.createElement("div", {
     className: "container flex"
   }, React.createElement("div", {
@@ -32203,7 +32208,7 @@ function Header() {
     className: "h3"
   }, "DaRe")), React.createElement("div", {
     className: "right"
-  }, React.createElement(hamburger_1.default, null))));
+  }, React.createElement(hamburger_1.default, Object.assign({}, props)))));
 }
 
 exports.default = Header;
@@ -32253,8 +32258,12 @@ var store_1 = __webpack_require__(/*! ./store */ "./src/store/index.tsx");
 var react_redux_1 = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 
 function App() {
-  console.log(store_1.reduxStore.getState());
-  return React.createElement(React.Fragment, null, React.createElement(header_1.default, null), React.createElement("div", {
+  var navState = react_redux_1.useSelector(function (state) {
+    return state.navStatus.navOpened;
+  });
+  return React.createElement(React.Fragment, null, React.createElement(header_1.default, {
+    navState: navState
+  }), React.createElement("div", {
     className: "wrapper"
   }, React.createElement("p", null, "Lorem ipsum dolor sit ", React.createElement("a", {
     href: "/"

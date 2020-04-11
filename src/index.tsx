@@ -5,13 +5,14 @@ import Header from "./components/header";
 
 import "./styles/style.scss";
 import { reduxStore } from './store';
-import { Provider } from 'react-redux';
+import { Provider, useSelector } from 'react-redux';
 
 function App() {
-  console.log(reduxStore.getState())
+  const navState: boolean = useSelector((state: any) => state.navStatus.navOpened);
+
   return (
     <>
-      <Header />
+      <Header navState={navState} />
       <div className="wrapper">
         <p>Lorem ipsum dolor sit <a href="/">amet</a>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <p>Lorem ipsum dolor sit <a href="/">amet</a>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
