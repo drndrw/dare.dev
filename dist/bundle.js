@@ -32196,6 +32196,42 @@ exports.default = Header;
 
 /***/ }),
 
+/***/ "./src/components/headerBackground.tsx":
+/*!*********************************************!*\
+  !*** ./src/components/headerBackground.tsx ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+  }
+  result["default"] = mod;
+  return result;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+function HeaderBackground() {
+  return React.createElement("div", {
+    className: "header-background"
+  });
+}
+
+exports.default = HeaderBackground;
+
+/***/ }),
+
 /***/ "./src/components/menu.tsx":
 /*!*********************************!*\
   !*** ./src/components/menu.tsx ***!
@@ -32279,6 +32315,8 @@ var ReactDOM = __importStar(__webpack_require__(/*! react-dom */ "./node_modules
 
 var header_1 = __importDefault(__webpack_require__(/*! ./components/header */ "./src/components/header.tsx"));
 
+var headerBackground_1 = __importDefault(__webpack_require__(/*! ./components/headerBackground */ "./src/components/headerBackground.tsx"));
+
 var menu_1 = __importDefault(__webpack_require__(/*! ./components/menu */ "./src/components/menu.tsx"));
 
 __webpack_require__(/*! ./styles/style.scss */ "./src/styles/style.scss");
@@ -32293,7 +32331,7 @@ function App() {
   });
   return React.createElement(React.Fragment, null, React.createElement(header_1.default, {
     navState: navState
-  }), React.createElement(menu_1.default, {
+  }), React.createElement(headerBackground_1.default, null), React.createElement(menu_1.default, {
     navState: navState
   }), React.createElement("div", {
     className: "wrapper"

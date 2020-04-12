@@ -1,0 +1,21 @@
+@import '../foundation/colors';
+@import '../foundation/sizing';
+
+.header-background {
+  position: fixed;
+  width: 100%;
+  background-color: $background;
+  z-index: 2;
+}
+
+@media (min-width: map-get($breakpoints, m)) {
+  .header-background {
+    height: map-get($sizes, xxl);
+  }
+}
+
+@media (max-width: map-get($breakpoints, m)) {
+  .header-background {
+    height: map-get($sizes, xl);
+  }
+}
