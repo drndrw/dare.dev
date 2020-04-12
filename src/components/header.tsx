@@ -4,7 +4,7 @@ import Hamburger from "./hamburger";
 
 export default function Header(props: any) {
   return (
-    <nav>
+    <nav className={props.navState ? 'open' : ''}>
       <div className="container flex">
         <div className="left">
           <span className="h3">DaRe</span>

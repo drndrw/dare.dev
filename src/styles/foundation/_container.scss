@@ -5,6 +5,10 @@ body {
   margin: 0;
 }
 
+body.nav-open {
+  background-color: $white;
+}
+
 .container {
   max-width: map-get($breakpoints, xl);
   width: 100%;
