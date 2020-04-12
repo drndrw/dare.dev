@@ -41,6 +41,8 @@
   transform: translateY(-((map-get($sizes, xxs) + map-get($sizes, xxxs))/ 2));
 
   & .hamburger-line {
+    background-color: $background;
+
     &.top {
       @include transition(45deg, map-get($sizes, xxs) + map-get($sizes, xxxs));
     }
