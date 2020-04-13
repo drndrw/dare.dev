@@ -32268,11 +32268,17 @@ function Menu(props) {
       opacity: '0',
       visibility: 'hidden'
     }
-  }, React.createElement("h1", {
-    style: {
-      color: '#000'
-    }
-  }, "hey dude"));
+  }, React.createElement("div", {
+    className: "container flex reverse"
+  }, React.createElement("a", {
+    href: "/test",
+    class: "h4"
+  }, "Testing")), React.createElement("div", {
+    className: "container flex reverse"
+  }, React.createElement("a", {
+    href: "/test",
+    class: "h4"
+  }, "Testing")));
 }
 
 exports.default = Menu;
