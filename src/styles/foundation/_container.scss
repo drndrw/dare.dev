@@ -3,6 +3,14 @@
 body {
   background-color: $background;
   margin: 0;
+
+  &.nav-opened {
+    background-color: $white;
+    overflow: hidden;
+    // transition-delay: .27s;
+    // transition-property: background-color;
+    transition: .25s background-color ease-in-out .27s;
+  }
 }
 
 body.nav-open {

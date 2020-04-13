@@ -32268,11 +32268,17 @@ function Menu(props) {
       opacity: '0',
       visibility: 'hidden'
     }
-  }, React.createElement("h1", {
-    style: {
-      color: '#000'
-    }
-  }, "hey dude"));
+  }, React.createElement("div", {
+    className: "container flex reverse"
+  }, React.createElement("a", {
+    href: "/test",
+    class: "h4"
+  }, "Testing")), React.createElement("div", {
+    className: "container flex reverse"
+  }, React.createElement("a", {
+    href: "/test",
+    class: "h4"
+  }, "Testing")));
 }
 
 exports.default = Menu;
@@ -32358,6 +32364,40 @@ ReactDOM.render(React.createElement(react_redux_1.Provider, {
 
 /***/ }),
 
+/***/ "./src/middleware/index.tsx":
+/*!**********************************!*\
+  !*** ./src/middleware/index.tsx ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var actions_1 = __webpack_require__(/*! ../actions */ "./src/actions/index.tsx");
+
+exports.navMiddleware = function (store) {
+  return function (next) {
+    return function (action) {
+      if (action.type === actions_1.TOGGLE_NAV_MENU) {
+        if (action.status) {
+          document.body.classList.add('nav-opened');
+        } else {
+          document.body.classList.remove('nav-opened');
+        }
+      }
+
+      next(action);
+    };
+  };
+};
+
+/***/ }),
+
 /***/ "./src/reducers/index.tsx":
 /*!********************************!*\
   !*** ./src/reducers/index.tsx ***!
@@ -32416,9 +32456,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var reducers_1 = __webpack_require__(/*! ../reducers */ "./src/reducers/index.tsx");
 
+var middleware_1 = __webpack_require__(/*! ../middleware */ "./src/middleware/index.tsx");
+
 var redux_1 = __webpack_require__(/*! redux */ "./node_modules/redux/es/redux.js");
 
-exports.reduxStore = redux_1.createStore(reducers_1.rootReducer);
+exports.reduxStore = redux_1.createStore(reducers_1.rootReducer, redux_1.applyMiddleware(middleware_1.navMiddleware));
 
 /***/ }),
 
