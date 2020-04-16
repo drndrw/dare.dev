@@ -16,7 +16,7 @@ body.nav-open {
     display: flex;
     flex-direction: row; }
 
-@media (min-width: 1200px) {
+@media (min-width: 1233px) {
   .container, .wrapper {
     margin-left: auto;
     margin-right: auto; }
@@ -24,7 +24,7 @@ body.nav-open {
     width: 100%;
     max-width: 1200px; } }
 
-@media (max-width: 1200px) {
+@media (max-width: 1232px) {
   .container, .wrapper {
     padding-left: 24px;
     padding-right: 24px; } }
@@ -235,11 +235,11 @@ nav {
   .menu .container {
     flex-direction: row-reverse; }
 
-@media (min-width: 1200px) {
+@media (min-width: 1233px) {
   .menu .container {
     width: 100%; } }
 
-@media (max-width: 1200px) {
+@media (max-width: 1232px) {
   .menu .container {
     width: auto; } }
 

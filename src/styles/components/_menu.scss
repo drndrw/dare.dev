@@ -28,13 +28,13 @@
 }
 
 
-@media (min-width: map-get($breakpoints, xl)) {
+@media (min-width: $xl-breakpoint-sm-size-min) {
   .menu .container {
     width: 100%;
   }
 }
 
-@media (max-width: map-get($breakpoints, xl)) {
+@media (max-width: $xl-breakpoint-sm-size) {
   .menu .container {
     width: auto;
   }
