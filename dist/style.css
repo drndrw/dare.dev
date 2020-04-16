@@ -19,10 +19,13 @@ body.nav-open {
 @media (min-width: 1200px) {
   .container, .wrapper {
     margin-left: auto;
-    margin-right: auto; } }
+    margin-right: auto; }
+  .wrapper {
+    width: 100%;
+    max-width: 1200px; } }
 
 @media (max-width: 1200px) {
-  .container {
+  .container, .wrapper {
     padding-left: 24px;
     padding-right: 24px; } }
 

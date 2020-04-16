@@ -12,6 +12,7 @@ import Menu from "./components/menu";
 // Routes
 import Home from "./components/routes/home";
 import About from "./components/routes/about";
+import NotFound from "./components/routes/notfound";
 
 // Styles
 import "./styles/style.scss";
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route exact path='/about'>
             <About />
+          </Route>
+          <Route>
+            <NotFound />
           </Route>
         </Switch>
       </div>
