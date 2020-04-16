@@ -32,10 +32,15 @@ body.nav-open {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .wrapper {
+    width: 100%;
+    max-width: 1200px;
+  }
 }
 
 @media (max-width: map-get($breakpoints, xl)) {
-  .container {
+  .container, .wrapper {
     padding-left: map-get($sizes, s);
     padding-right: map-get($sizes, s);
   }

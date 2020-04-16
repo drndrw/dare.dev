@@ -35405,6 +35405,43 @@ exports.default = Home;
 
 /***/ }),
 
+/***/ "./src/components/routes/notfound.tsx":
+/*!********************************************!*\
+  !*** ./src/components/routes/notfound.tsx ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+  }
+  result["default"] = mod;
+  return result;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+function NotFound(props) {
+  react_1.useEffect(function () {
+    document.title = '404 - DaRe';
+  }, []);
+  return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("h1", null, "404"), react_1.default.createElement("p", null, "Not what you were looking for, sorry"));
+}
+
+exports.default = NotFound;
+
+/***/ }),
+
 /***/ "./src/index.tsx":
 /*!***********************!*\
   !*** ./src/index.tsx ***!
@@ -35455,7 +35492,9 @@ var menu_1 = __importDefault(__webpack_require__(/*! ./components/menu */ "./src
 
 var home_1 = __importDefault(__webpack_require__(/*! ./components/routes/home */ "./src/components/routes/home.tsx"));
 
-var about_1 = __importDefault(__webpack_require__(/*! ./components/routes/about */ "./src/components/routes/about.tsx")); // Styles
+var about_1 = __importDefault(__webpack_require__(/*! ./components/routes/about */ "./src/components/routes/about.tsx"));
+
+var notfound_1 = __importDefault(__webpack_require__(/*! ./components/routes/notfound */ "./src/components/routes/notfound.tsx")); // Styles
 
 
 __webpack_require__(/*! ./styles/style.scss */ "./src/styles/style.scss");
@@ -35476,7 +35515,7 @@ function App() {
   }, React.createElement(home_1.default, null)), React.createElement(react_router_dom_1.Route, {
     exact: true,
     path: '/about'
-  }, React.createElement(about_1.default, null)))));
+  }, React.createElement(about_1.default, null)), React.createElement(react_router_dom_1.Route, null, React.createElement(notfound_1.default, null)))));
 }
 
 ReactDOM.render(React.createElement(react_redux_1.Provider, {
