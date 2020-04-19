@@ -16,8 +16,9 @@ nav {
   z-index: 4;
   @include navTransition();
 
-  & span {
+  & span, & a {
     margin: 0;
+    text-decoration: none;
     @include navTransition();
   }
 
@@ -35,7 +36,7 @@ nav {
 
   &.open {
 
-    & span {
+    & span, & a {
       color: $background;
     }
   }
