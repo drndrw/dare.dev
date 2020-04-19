@@ -1,0 +1,84 @@
+@import '../foundation/sizing';
+@import '../foundation/colors';
+
+html,
+body, #app {
+ min-height: 100%;
+ position: relative;
+}
+
+.wrapper {
+ overflow: hidden;
+ display: block;
+ position: relative;
+ // padding-bottom: map-get($sizes, xxl);
+}
+
+@media (min-width: map-get($breakpoints, m)) {
+  .wrapper {
+    min-height: calc(100vh - #{$footer-height-desktop} - #{map-get($sizes, sm)} - #{map-get($sizes, sm)} - #{map-get($sizes, xxl)});
+    padding-bottom: #{$footer-height-desktop + map-get($sizes, sm) + map-get($sizes, sm)};
+  }
+
+  footer .container.flex {
+    height: $footer-height-desktop;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: map-get($breakpoints, m)) {
+  .wrapper {
+    min-height: calc(100vh - #{$footer-height-mobile} - #{map-get($sizes, sm)} - #{map-get($sizes, sm)} - #{map-get($sizes, xl)});
+    padding-bottom: #{$footer-height-mobile + map-get($sizes, sm) + map-get($sizes, sm)};
+  }
+
+  footer .container.flex {
+    height: $footer-height-mobile;
+    flex-direction: column;
+
+    & .right {
+      align-items: flex-start;
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  padding-top: map-get($sizes, sm);
+  padding-bottom: map-get($sizes, sm);
+
+  & .container {
+
+    & .left, .right {
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     // flex: 50%;
+    }
+
+    & .left {
+      flex: 1;
+    }
+
+    & .right {
+     align-items: flex-end;
+     flex: 2;
+    }
+
+    & a, & span {
+     margin: 0;
+    }
+
+    & .footer-svg {
+      fill: $white;
+
+      &.first {
+        margin-right: map-get($sizes, xxs);
+      }
+    }
+ }
+}

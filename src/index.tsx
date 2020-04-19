@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "./components/header";
 import HeaderBackground from "./components/headerBackground";
 import Menu from "./components/menu";
+import Footer from "./components/footer";
 
 // Routes
 import Home from "./components/routes/home";
@@ -38,6 +39,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+      <Footer />
     </Router>
   )
 }

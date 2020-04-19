@@ -27,7 +27,7 @@ body.nav-open {
   }
 }
 
-@media (min-width: map-get($breakpoints, xl)) {
+@media (min-width: $xl-breakpoint-sm-size-min) {
   .container, .wrapper {
     margin-left: auto;
     margin-right: auto;
@@ -35,11 +35,11 @@ body.nav-open {
 
   .wrapper {
     width: 100%;
-    max-width: 1200px;
+    max-width: map-get($breakpoints, xl);
   }
 }
 
-@media (max-width: map-get($breakpoints, xl)) {
+@media (max-width: $xl-breakpoint-sm-size) {
   .container, .wrapper {
     padding-left: map-get($sizes, s);
     padding-right: map-get($sizes, s);

@@ -17,3 +17,8 @@ $sizes: (
   "xl": 64px,
   "xxl": 72px
 );
+
+$xl-breakpoint-sm-size: #{map-get($breakpoints, xl) + map-get($sizes, sm)};
+$xl-breakpoint-sm-size-min: #{map-get($breakpoints, xl) + map-get($sizes, sm) + 1px};
+$footer-height-desktop: map-get($sizes, lm);
+$footer-height-mobile: map-get($sizes, xl) * 3;

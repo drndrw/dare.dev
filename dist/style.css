@@ -16,7 +16,7 @@ body.nav-open {
     display: flex;
     flex-direction: row; }
 
-@media (min-width: 1200px) {
+@media (min-width: 1233px) {
   .container, .wrapper {
     margin-left: auto;
     margin-right: auto; }
@@ -24,7 +24,7 @@ body.nav-open {
     width: 100%;
     max-width: 1200px; } }
 
-@media (max-width: 1200px) {
+@media (max-width: 1232px) {
   .container, .wrapper {
     padding-left: 24px;
     padding-right: 24px; } }
@@ -235,11 +235,11 @@ nav {
   .menu .container {
     flex-direction: row-reverse; }
 
-@media (min-width: 1200px) {
+@media (min-width: 1233px) {
   .menu .container {
     width: 100%; } }
 
-@media (max-width: 1200px) {
+@media (max-width: 1232px) {
   .menu .container {
     width: auto; } }
 
@@ -250,5 +250,57 @@ nav {
 @media (max-width: 768px) {
   .menu {
     padding-top: 64px; } }
+
+html,
+body, #app {
+  min-height: 100%;
+  position: relative; }
+
+.wrapper {
+  overflow: hidden;
+  display: block;
+  position: relative; }
+
+@media (min-width: 768px) {
+  .wrapper {
+    min-height: calc(100vh - 48px - 32px - 32px - 72px);
+    padding-bottom: 112px; }
+  footer .container.flex {
+    height: 48px;
+    flex-direction: row; } }
+
+@media (max-width: 768px) {
+  .wrapper {
+    min-height: calc(100vh - 192px - 32px - 32px - 64px);
+    padding-bottom: 256px; }
+  footer .container.flex {
+    height: 192px;
+    flex-direction: column; }
+    footer .container.flex .right {
+      align-items: flex-start; } }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px; }
+  footer .container .left, footer .container .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
+  footer .container .left {
+    flex: 1; }
+  footer .container .right {
+    align-items: flex-end;
+    flex: 2; }
+  footer .container a, footer .container span {
+    margin: 0; }
+  footer .container .footer-svg {
+    fill: #ffffff; }
+    footer .container .footer-svg.first {
+      margin-right: 8px; }
 
 /*# sourceMappingURL=style.css.map*/
