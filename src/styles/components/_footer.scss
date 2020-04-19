@@ -1,0 +1,50 @@
+@import '../foundation/sizing';
+@import '../foundation/colors';
+
+html,
+body, #app {
+ min-height: 100%;
+ position: relative;
+}
+
+.wrapper {
+ overflow: hidden;
+ display: block;
+ position: relative;
+ padding-bottom: map-get($sizes, xxl);
+}
+
+@media (min-width: map-get($breakpoints, m)) {
+  .wrapper {
+    min-height: calc(100vh - #{map-get($sizes, xxl)} - #{map-get($sizes, xxl)});
+  }
+}
+
+@media (max-width: map-get($breakpoints, m)) {
+  .wrapper {
+    min-height: calc(100vh - #{map-get($sizes, xxl)} - #{map-get($sizes, xl)});
+  }
+}
+
+footer {
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+ height: map-get($sizes, xxl);
+ // background-color: #000;
+ display: flex;
+ // align-items: center;
+
+ & .container {
+
+   & .left, .right {
+     display: flex;
+     align-items: center;
+     flex: 50%;
+   }
+
+   & .right {
+     flex-direction: row-reverse;
+   }
+ }
+}

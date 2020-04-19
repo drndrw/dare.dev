@@ -35111,6 +35111,52 @@ exports.toggleNav = toggleNav;
 
 /***/ }),
 
+/***/ "./src/components/footer.tsx":
+/*!***********************************!*\
+  !*** ./src/components/footer.tsx ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+  }
+  result["default"] = mod;
+  return result;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+var react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+function Footer() {
+  return React.createElement("footer", {
+    className: "footer"
+  }, React.createElement("div", {
+    className: "container flex"
+  }, React.createElement("div", {
+    className: "left"
+  }, React.createElement(react_router_dom_1.Link, {
+    to: "/"
+  }, "Home")), React.createElement("div", {
+    className: "right"
+  }, React.createElement("span", null, "\xA92020 Andrew DaRe"))));
+}
+
+exports.default = Footer;
+
+/***/ }),
+
 /***/ "./src/components/hamburger.tsx":
 /*!**************************************!*\
   !*** ./src/components/hamburger.tsx ***!
@@ -35487,7 +35533,9 @@ var header_1 = __importDefault(__webpack_require__(/*! ./components/header */ ".
 
 var headerBackground_1 = __importDefault(__webpack_require__(/*! ./components/headerBackground */ "./src/components/headerBackground.tsx"));
 
-var menu_1 = __importDefault(__webpack_require__(/*! ./components/menu */ "./src/components/menu.tsx")); // Routes
+var menu_1 = __importDefault(__webpack_require__(/*! ./components/menu */ "./src/components/menu.tsx"));
+
+var footer_1 = __importDefault(__webpack_require__(/*! ./components/footer */ "./src/components/footer.tsx")); // Routes
 
 
 var home_1 = __importDefault(__webpack_require__(/*! ./components/routes/home */ "./src/components/routes/home.tsx"));
@@ -35515,7 +35563,7 @@ function App() {
   }, React.createElement(home_1.default, null)), React.createElement(react_router_dom_1.Route, {
     exact: true,
     path: '/about'
-  }, React.createElement(about_1.default, null)), React.createElement(react_router_dom_1.Route, null, React.createElement(notfound_1.default, null)))));
+  }, React.createElement(about_1.default, null)), React.createElement(react_router_dom_1.Route, null, React.createElement(notfound_1.default, null)))), React.createElement(footer_1.default, null));
 }
 
 ReactDOM.render(React.createElement(react_redux_1.Provider, {
