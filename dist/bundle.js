@@ -35173,12 +35173,12 @@ function Footer() {
   }, React.createElement("a", {
     target: "_blank",
     href: "https://www.linkedin.com/in/andrewdare/"
-  }, React.createElement(linkedin_1.default, {
-    first: true
-  })), React.createElement("a", {
+  }, React.createElement(linkedin_1.default, null)), React.createElement("a", {
     target: "_blank",
     href: "https://github.com/drndrw"
-  }, React.createElement(github_1.default, null))), React.createElement("span", null, "\xA92020 Andrew DaRe"))));
+  }, React.createElement(github_1.default, null))), React.createElement("span", null, React.createElement("span", {
+    className: "copy"
+  }, "\xA9"), "2020 Andrew DaRe"))));
 }
 
 exports.default = Footer;
@@ -35261,17 +35261,28 @@ Object.defineProperty(exports, "__esModule", {
 
 var React = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
+var react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
+var react_redux_1 = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+
+var actions_1 = __webpack_require__(/*! ../actions */ "./src/actions/index.tsx");
+
 var hamburger_1 = __importDefault(__webpack_require__(/*! ./hamburger */ "./src/components/hamburger.tsx"));
 
 function Header(props) {
+  var dispatch = react_redux_1.useDispatch();
   return React.createElement("nav", {
     className: props.navState ? 'open' : ''
   }, React.createElement("div", {
     className: "container flex"
   }, React.createElement("div", {
     className: "left"
-  }, React.createElement("span", {
-    className: "h3"
+  }, React.createElement(react_router_dom_1.Link, {
+    to: "/",
+    className: "h3",
+    onClick: function onClick() {
+      return dispatch(actions_1.toggleNav(false));
+    }
   }, "DaRe")), React.createElement("div", {
     className: "right"
   }, React.createElement(hamburger_1.default, Object.assign({}, props)))));

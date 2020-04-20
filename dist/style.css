@@ -106,8 +106,9 @@ nav {
   -moz-transition: .25s ease-in-out;
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out; }
-  nav span {
+  nav span, nav a {
     margin: 0;
+    text-decoration: none;
     -webkit-transition: .25s ease-in-out;
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
@@ -118,7 +119,7 @@ nav {
     flex: 50%; }
   nav .container .right {
     flex-direction: row-reverse; }
-  nav.open span {
+  nav.open span, nav.open a {
     color: #021859; }
 
 @media (min-width: 768px) {

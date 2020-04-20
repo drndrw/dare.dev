@@ -18,10 +18,10 @@ export default function Footer() {
         </div>
         <div className="right">
           <div className="logo-bar">
-            <a target="_blank" href="https://www.linkedin.com/in/andrewdare/"><LinkedIn first /></a>
+            <a target="_blank" href="https://www.linkedin.com/in/andrewdare/"><LinkedIn /></a>
             <a target="_blank" href="https://github.com/drndrw"><GitHub /></a>
           </div>
-          <span>&copy;2020 Andrew DaRe</span>
+          <span><span className="copy">&copy;</span>2020 Andrew DaRe</span>
         </div>
       </div>
     </footer>
