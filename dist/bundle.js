@@ -35465,25 +35465,21 @@ Object.defineProperty(exports, "__esModule", {
 
 var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
+var react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 function Home(props) {
   react_1.useEffect(function () {
     document.title = 'Andrew DaRe';
   }, []);
-  return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("p", null, "NOPE Lorem ipsum dolor sit ", react_1.default.createElement("a", {
-    href: "/"
-  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), react_1.default.createElement("p", null, "Lorem ipsum dolor sit ", react_1.default.createElement("a", {
-    href: "/"
-  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), react_1.default.createElement("p", null, "Lorem ipsum dolor sit ", react_1.default.createElement("a", {
-    href: "/"
-  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), react_1.default.createElement("p", null, "Lorem ipsum dolor sit ", react_1.default.createElement("a", {
-    href: "/"
-  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), react_1.default.createElement("p", null, "Lorem ipsum dolor sit ", react_1.default.createElement("a", {
-    href: "/"
-  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), react_1.default.createElement("p", null, "Lorem ipsum dolor sit ", react_1.default.createElement("a", {
-    href: "/"
-  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."), react_1.default.createElement("p", null, "Lorem ipsum dolor sit ", react_1.default.createElement("a", {
-    href: "/"
-  }, "amet"), ", consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."));
+  return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("p", null, "Hey, I'm Andrew. I'm a software engineer, cat dad, Volkswagon bus owner and sourdough bread baking enthusiast. I'm currently a web developer at ", react_1.default.createElement("a", {
+    href: "https://www.hellosign.com"
+  }, "HelloSign, a Dropbox Company"), "."), react_1.default.createElement("p", null, "I have extensive software development, project and product management experience, working at companies small, medium and large. I've worked across a number of technical stacks to build web services, automated tools and more."), react_1.default.createElement("p", null, "If you'd like to learn more, ", react_1.default.createElement(react_router_dom_1.Link, {
+    to: "/about"
+  }, "read more about me"), ", ", react_1.default.createElement(react_router_dom_1.Link, {
+    to: "/resume"
+  }, "check out my resume"), ", or ", react_1.default.createElement(react_router_dom_1.Link, {
+    to: "/contact"
+  }, "reach out to me directly"), "."));
 }
 
 exports.default = Home;
