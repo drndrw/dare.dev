@@ -18,6 +18,7 @@ body, #app {
   .wrapper {
     // Footer height - top and bottom footer padding - margin above footer - height of navigation
     min-height: calc(100vh - #{$footer-height-desktop} - #{map-get($sizes, sm)} - #{map-get($sizes, sm)} - #{map-get($sizes, lm)} - #{map-get($sizes, xxl)});
+    // Footer height + top and bottom footer padding + margin above footer
     padding-bottom: #{$footer-height-desktop + map-get($sizes, sm) + map-get($sizes, sm) + map-get($sizes, lm)};
   }
 
@@ -31,6 +32,7 @@ body, #app {
   .wrapper {
     // Footer height - top and bottom footer padding - margin above footer - height of navigation
     min-height: calc(100vh - #{$footer-height-mobile} - #{map-get($sizes, sm)} - #{map-get($sizes, sm)} - #{map-get($sizes, sm)} - #{map-get($sizes, xl)});
+    // Footer height + top and bottom footer padding + margin above footer 
     padding-bottom: #{$footer-height-mobile + map-get($sizes, sm) + map-get($sizes, sm) + map-get($sizes, sm)};
   }
 
