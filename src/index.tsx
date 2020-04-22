@@ -13,6 +13,7 @@ import Footer from "./components/footer";
 // Routes
 import Home from "./components/routes/home";
 import About from "./components/routes/about";
+import Resume from "./components/routes/resume";
 import NotFound from "./components/routes/notfound";
 
 // Styles
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route exact path='/about'>
             <About />
+          </Route>
+          <Route exact path='/resume'>
+            <Resume />
           </Route>
           <Route>
             <NotFound />

@@ -35473,13 +35473,40 @@ function Home(props) {
   }, []);
   return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("p", null, "Hey, I'm Andrew. I'm a software engineer, cat dad, Volkswagon bus owner and sourdough bread baking enthusiast. I'm currently a web developer at ", react_1.default.createElement("a", {
     href: "https://www.hellosign.com"
-  }, "HelloSign, a Dropbox Company"), "."), react_1.default.createElement("p", null, "I have extensive software development, project and product management experience, working at companies small, medium and large. I've worked across a number of technical stacks to build web services, automated tools and more."), react_1.default.createElement("p", null, "If you'd like to learn more, ", react_1.default.createElement(react_router_dom_1.Link, {
+  }, "HelloSign, a Dropbox Company"), "."), react_1.default.createElement("p", null, "I have extensive software development, project and product management experience, working at companies small and large. I've worked across a number of technical stacks to build web services, automated tools and more. My current projects include some Javascript (", react_1.default.createElement("a", {
+    href: "https://reactjs.org/",
+    target: "_blank"
+  }, "React"), ", ", react_1.default.createElement("a", {
+    href: "https://redux.js.org/",
+    target: "_blank"
+  }, "Redux"), ", ", react_1.default.createElement("a", {
+    href: "https://www.typescriptlang.org/",
+    target: "_blank"
+  }, "Typescript"), ", ", react_1.default.createElement("a", {
+    href: "https://expressjs.com/",
+    target: "_blank"
+  }, "Express"), "), Python (", react_1.default.createElement("a", {
+    href: "https://flask.palletsprojects.com/en/1.1.x/",
+    target: "_blank"
+  }, "Flask"), ", ", react_1.default.createElement("a", {
+    href: "https://www.djangoproject.com/",
+    target: "_blank"
+  }, "Django"), "), and various tooling (", react_1.default.createElement("a", {
+    href: "https://webpack.js.org/",
+    target: "_blank"
+  }, "Webpack"), ", ", react_1.default.createElement("a", {
+    href: "https://sass-lang.com/",
+    target: "_blank"
+  }, "SASS"), ", ", react_1.default.createElement("a", {
+    href: "https://www.docker.com/",
+    target: "_blank"
+  }, "Docker"), "), just to name a few."), react_1.default.createElement("p", null, "Feel free to ", react_1.default.createElement(react_router_dom_1.Link, {
     to: "/about"
   }, "read more about me"), ", ", react_1.default.createElement(react_router_dom_1.Link, {
     to: "/resume"
   }, "check out my resume"), ", or ", react_1.default.createElement(react_router_dom_1.Link, {
     to: "/contact"
-  }, "reach out to me directly"), "."));
+  }, "reach out to me directly"), ". I'm looking forward to connecting!"));
 }
 
 exports.default = Home;
@@ -35520,6 +35547,111 @@ function NotFound(props) {
 }
 
 exports.default = NotFound;
+
+/***/ }),
+
+/***/ "./src/components/routes/resume.tsx":
+/*!******************************************!*\
+  !*** ./src/components/routes/resume.tsx ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+  }
+  result["default"] = mod;
+  return result;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+function Resume(props) {
+  react_1.useEffect(function () {
+    document.title = 'Resume - DaRe';
+  }, []);
+  return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("h1", {
+    className: "h3"
+  }, "Resume"), react_1.default.createElement("h2", {
+    className: "h4"
+  }, "Experience"), react_1.default.createElement("div", {
+    className: "resume-item"
+  }, react_1.default.createElement("h5", null, "Web Developer \u2014 ", react_1.default.createElement("span", {
+    className: "italic"
+  }, "HelloSign, a Dropbox Company")), react_1.default.createElement("p", {
+    className: "italic location"
+  }, "San Francisco, CA \u2014 May 2019 to Present"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Developer and manager for HelloSign\u2019s marketing website"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Work cross functionally across Hellosign and Dropbox to build new website features and content"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Develop website and automation tools using Javascript (React) and Python")), react_1.default.createElement("div", {
+    className: "resume-item"
+  }, react_1.default.createElement("h5", null, "Web Producer \u2014 ", react_1.default.createElement("span", {
+    className: "italic"
+  }, "Atlassian")), react_1.default.createElement("p", {
+    className: "italic location"
+  }, "San Francisco, CA \u2014 January 2018 to May 2019"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Support Atlassian\u2019s marketing by developing content using a CMS"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Handle front-end development tasks using Javascript, SASS, Freemarker and Git"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Developed automation and productivity tools using Python and Javascript")), react_1.default.createElement("div", {
+    className: "resume-item"
+  }, react_1.default.createElement("h5", null, "Vendor Project Manager \u2014 ", react_1.default.createElement("span", {
+    className: "italic"
+  }, "Apple (Welocalize)")), react_1.default.createElement("p", {
+    className: "italic location"
+  }, "Cupertino, CA \u2014 July 2017 to January 2018"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Manage a team of localization contractors onsite at Apple, by enforcing quality and productivity expectations established by Apple\u2019s localization team"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Developed and implemented productivity tracking software to replace the localization team\u2019s existing platform, and to produce productivity metrics for Apple")), react_1.default.createElement("div", {
+    className: "resume-item"
+  }, react_1.default.createElement("h5", null, "Production Designer \u2014 ", react_1.default.createElement("span", {
+    className: "italic"
+  }, "Apple (Welocalize)")), react_1.default.createElement("p", {
+    className: "italic location"
+  }, "Cupertino, CA \u2014 June 2016 to July 2017"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Produced localized print and digital documentation for various Apple products across forty languages"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Developed software to streamline and automate localization processes for graphic QA checks, batch image exporting, and XML parsing for language translation analysis")), react_1.default.createElement("div", {
+    className: "resume-item"
+  }, react_1.default.createElement("h5", null, "Digital Production Manager \u2014 ", react_1.default.createElement("span", {
+    className: "italic"
+  }, "University Graphic Systems")), react_1.default.createElement("p", {
+    className: "italic location"
+  }, "San Luis Obispo, CA \u2014 June 2015 to June 2016"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Used and maintained various commercial digital presses and affiliated software"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Managed and instructed a team of interns regarding press operation, workflow management and creation of standard operating procedures for the company")), react_1.default.createElement("div", {
+    className: "resume-item"
+  }, react_1.default.createElement("h5", null, "Print Production Specialist Intern \u2014 ", react_1.default.createElement("span", {
+    className: "italic"
+  }, "Robinson Anderson Print & Fulfillment")), react_1.default.createElement("p", {
+    className: "italic location"
+  }, "Elk Grove, CA \u2014 June 2015 to September 2015"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Worked with prepress, production and postpress operations with various types of jobs"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Calibrated presses for color accuracy and proof color matching for clients")));
+}
+
+exports.default = Resume;
 
 /***/ }),
 
@@ -35663,6 +35795,8 @@ var home_1 = __importDefault(__webpack_require__(/*! ./components/routes/home */
 
 var about_1 = __importDefault(__webpack_require__(/*! ./components/routes/about */ "./src/components/routes/about.tsx"));
 
+var resume_1 = __importDefault(__webpack_require__(/*! ./components/routes/resume */ "./src/components/routes/resume.tsx"));
+
 var notfound_1 = __importDefault(__webpack_require__(/*! ./components/routes/notfound */ "./src/components/routes/notfound.tsx")); // Styles
 
 
@@ -35684,7 +35818,10 @@ function App() {
   }, React.createElement(home_1.default, null)), React.createElement(react_router_dom_1.Route, {
     exact: true,
     path: '/about'
-  }, React.createElement(about_1.default, null)), React.createElement(react_router_dom_1.Route, null, React.createElement(notfound_1.default, null)))), React.createElement(footer_1.default, null));
+  }, React.createElement(about_1.default, null)), React.createElement(react_router_dom_1.Route, {
+    exact: true,
+    path: '/resume'
+  }, React.createElement(resume_1.default, null)), React.createElement(react_router_dom_1.Route, null, React.createElement(notfound_1.default, null)))), React.createElement(footer_1.default, null));
 }
 
 ReactDOM.render(React.createElement(react_redux_1.Provider, {

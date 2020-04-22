@@ -56,6 +56,9 @@ a {
   a:hover {
     text-decoration: none; }
 
+.italic {
+  font-style: italic; }
+
 @media (min-width: 768px) {
   h1, .h1 {
     font-size: 56px;
@@ -303,5 +306,16 @@ footer {
     fill: #ffffff; }
     footer .container .footer-svg.first {
       margin-right: 8px; }
+
+.resume-item {
+  padding: 16px 0; }
+  .resume-item h5, .resume-item p {
+    margin: 4px 0; }
+  .resume-item .location {
+    margin-bottom: 16px; }
+  .resume-item .item {
+    margin-left: 16px; }
+    .resume-item .item:before {
+      content: "* "; }
 
 /*# sourceMappingURL=style.css.map*/

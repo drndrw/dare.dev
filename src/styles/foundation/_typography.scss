@@ -28,6 +28,10 @@ a {
   }
 }
 
+.italic {
+  font-style: italic;
+}
+
 @media (min-width: map-get($breakpoints, m)) {
   h1, .h1 {
     font-size: map-get($sizes, l);
