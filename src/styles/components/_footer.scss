@@ -16,8 +16,9 @@ body, #app {
 
 @media (min-width: map-get($breakpoints, m)) {
   .wrapper {
-    min-height: calc(100vh - #{$footer-height-desktop} - #{map-get($sizes, sm)} - #{map-get($sizes, sm)} - #{map-get($sizes, xxl)});
-    padding-bottom: #{$footer-height-desktop + map-get($sizes, sm) + map-get($sizes, sm)};
+    // Footer height - top and bottom footer padding - margin above footer - height of navigation
+    min-height: calc(100vh - #{$footer-height-desktop} - #{map-get($sizes, sm)} - #{map-get($sizes, sm)} - #{map-get($sizes, lm)} - #{map-get($sizes, xxl)});
+    padding-bottom: #{$footer-height-desktop + map-get($sizes, sm) + map-get($sizes, sm) + map-get($sizes, lm)};
   }
 
   footer .container.flex {
@@ -28,8 +29,9 @@ body, #app {
 
 @media (max-width: map-get($breakpoints, m)) {
   .wrapper {
-    min-height: calc(100vh - #{$footer-height-mobile} - #{map-get($sizes, sm)} - #{map-get($sizes, sm)} - #{map-get($sizes, xl)});
-    padding-bottom: #{$footer-height-mobile + map-get($sizes, sm) + map-get($sizes, sm)};
+    // Footer height - top and bottom footer padding - margin above footer - height of navigation
+    min-height: calc(100vh - #{$footer-height-mobile} - #{map-get($sizes, sm)} - #{map-get($sizes, sm)} - #{map-get($sizes, sm)} - #{map-get($sizes, xl)});
+    padding-bottom: #{$footer-height-mobile + map-get($sizes, sm) + map-get($sizes, sm) + map-get($sizes, sm)};
   }
 
   footer .container.flex {

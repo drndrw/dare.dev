@@ -267,16 +267,16 @@ body, #app {
 
 @media (min-width: 768px) {
   .wrapper {
-    min-height: calc(100vh - 48px - 32px - 32px - 72px);
-    padding-bottom: 112px; }
+    min-height: calc(100vh - 48px - 32px - 32px - 48px - 72px);
+    padding-bottom: 160px; }
   footer .container.flex {
     height: 48px;
     flex-direction: row; } }
 
 @media (max-width: 768px) {
   .wrapper {
-    min-height: calc(100vh - 192px - 32px - 32px - 64px);
-    padding-bottom: 256px; }
+    min-height: calc(100vh - 192px - 32px - 32px - 32px - 64px);
+    padding-bottom: 288px; }
   footer .container.flex {
     height: 192px;
     flex-direction: column; }
