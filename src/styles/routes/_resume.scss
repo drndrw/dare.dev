@@ -1,0 +1,21 @@
+@import '../foundation/sizing';
+
+.resume-item {
+  padding: map-get($sizes, xs) 0;
+
+  & h5, & p {
+    margin: map-get($sizes, xxxs)  0;
+  }
+
+  & .location {
+    margin-bottom: map-get($sizes, xs);
+  }
+
+  & .item{
+    margin-left: map-get($sizes, xs);
+
+    &:before {
+      content: "* ";
+    }
+  }
+}
