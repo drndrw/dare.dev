@@ -5,6 +5,7 @@ export default function Home(props: any) {
 
   useEffect (() => {
     document.title = 'Andrew DaRe';
+    window.scrollTo(0, 0);
   }, [])
 
   return (
