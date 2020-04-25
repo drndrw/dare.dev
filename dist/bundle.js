@@ -35431,6 +35431,7 @@ var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/reac
 function About(props) {
   react_1.useEffect(function () {
     document.title = 'About - DaRe';
+    window.scrollTo(0, 0);
   }, []);
   return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("p", null, "About"));
 }
@@ -35470,6 +35471,7 @@ var react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_mod
 function Home(props) {
   react_1.useEffect(function () {
     document.title = 'Andrew DaRe';
+    window.scrollTo(0, 0);
   }, []);
   return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("p", null, "Hey, I'm Andrew. I'm a software engineer, cat dad, Volkswagon bus owner and sourdough bread baking enthusiast. I'm currently a web developer at ", react_1.default.createElement("a", {
     href: "https://www.hellosign.com"
@@ -35542,6 +35544,7 @@ var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/reac
 function NotFound(props) {
   react_1.useEffect(function () {
     document.title = '404 - DaRe';
+    window.scrollTo(0, 0);
   }, []);
   return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("h1", null, "404"), react_1.default.createElement("p", null, "Not what you were looking for, sorry"));
 }
@@ -35579,6 +35582,7 @@ var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/reac
 function Resume(props) {
   react_1.useEffect(function () {
     document.title = 'Resume - DaRe';
+    window.scrollTo(0, 0);
   }, []);
   return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("h1", {
     className: "h3"

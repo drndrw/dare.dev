@@ -5,6 +5,7 @@ export default function Resume(props: any) {
 
   useEffect (() => {
     document.title = 'Resume - DaRe';
+    window.scrollTo(0, 0);
   }, [])
 
   return (
