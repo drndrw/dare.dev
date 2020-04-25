@@ -35585,7 +35585,8 @@ function Resume(props) {
   }, "Resume"), react_1.default.createElement("h2", {
     className: "h4"
   }, "Experience"), react_1.default.createElement("div", {
-    className: "experience"
+    className: "experience",
+    id: "experience"
   }, react_1.default.createElement("div", {
     className: "resume-item"
   }, react_1.default.createElement("h5", null, "Web Developer \u2014 ", react_1.default.createElement("span", {
@@ -35652,8 +35653,22 @@ function Resume(props) {
     className: "item"
   }, "Calibrated presses for color accuracy and proof color matching for clients"))), react_1.default.createElement("h2", {
     className: "h4"
+  }, "Education"), react_1.default.createElement("div", {
+    className: "education",
+    id: "education"
+  }, react_1.default.createElement("div", {
+    className: "resume-item"
+  }, react_1.default.createElement("h5", null, "Cal Poly, San Luis Obispo"), react_1.default.createElement("p", {
+    className: "italic location"
+  }, "San Luis Obispo, CA"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Graphic communication major"), react_1.default.createElement("p", {
+    className: "item"
+  }, "Web & digital media concentration"))), react_1.default.createElement("h2", {
+    className: "h4"
   }, "Skills"), react_1.default.createElement("div", {
-    className: "skills"
+    className: "skills",
+    id: "skills"
   }, react_1.default.createElement("div", {
     className: "resume-item"
   }, react_1.default.createElement("h5", null, "Languages"), react_1.default.createElement("p", {

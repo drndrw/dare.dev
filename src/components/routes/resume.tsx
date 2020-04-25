@@ -11,7 +11,7 @@ export default function Resume(props: any) {
     <>
       <h1 className="h3">Resume</h1>
       <h2 className="h4">Experience</h2>
-      <div className="experience">
+      <div className="experience" id="experience">
         <div className="resume-item">
           <h5>Web Developer — <span className="italic">HelloSign, a Dropbox Company</span></h5>
           <p className="italic location">San Francisco, CA — May 2019 to Present</p>
@@ -51,8 +51,17 @@ export default function Resume(props: any) {
           <p className="item">Calibrated presses for color accuracy and proof color matching for clients</p>
         </div>
       </div>
+      <h2 className="h4">Education</h2>
+      <div className="education" id="education">
+        <div className="resume-item">
+          <h5>Cal Poly, San Luis Obispo</h5>
+          <p className="italic location">San Luis Obispo, CA</p>
+          <p className="item">Graphic communication major</p>
+          <p className="item">Web & digital media concentration</p>
+        </div>
+      </div>
       <h2 className="h4">Skills</h2>
-      <div className="skills">
+      <div className="skills" id="skills">
         <div className="resume-item">
           <h5>Languages</h5>
           <p className="item"><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML</a></p>
