@@ -35585,6 +35585,8 @@ function Resume(props) {
   }, "Resume"), react_1.default.createElement("h2", {
     className: "h4"
   }, "Experience"), react_1.default.createElement("div", {
+    className: "experience"
+  }, react_1.default.createElement("div", {
     className: "resume-item"
   }, react_1.default.createElement("h5", null, "Web Developer \u2014 ", react_1.default.createElement("span", {
     className: "italic"
@@ -35648,7 +35650,121 @@ function Resume(props) {
     className: "item"
   }, "Worked with prepress, production and postpress operations with various types of jobs"), react_1.default.createElement("p", {
     className: "item"
-  }, "Calibrated presses for color accuracy and proof color matching for clients")));
+  }, "Calibrated presses for color accuracy and proof color matching for clients"))), react_1.default.createElement("h2", {
+    className: "h4"
+  }, "Skills"), react_1.default.createElement("div", {
+    className: "skills"
+  }, react_1.default.createElement("div", {
+    className: "resume-item"
+  }, react_1.default.createElement("h5", null, "Languages"), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+    target: "_blank"
+  }, "HTML")), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    target: "_blank"
+  }, "CSS")), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://www.python.org/",
+    target: "_blank"
+  }, "Python")), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    target: "_blank"
+  }, "JavaScript")), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://www.typescriptlang.org/",
+    target: "_blank"
+  }, "TypeScript")), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://en.wikipedia.org/wiki/SQL",
+    target: "_blank"
+  }, "SQL"))), react_1.default.createElement("div", {
+    className: "resume-item"
+  }, react_1.default.createElement("h5", null, "Front End"), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://reactjs.org/",
+    target: "_blank"
+  }, "React")), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://redux.js.org/",
+    target: "_blank"
+  }, "Redux")), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://sass-lang.com/",
+    target: "_blank"
+  }, "SASS")), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://webpack.js.org/",
+    target: "_blank"
+  }, "Webpack"))), react_1.default.createElement("div", {
+    className: "resume-item"
+  }, react_1.default.createElement("h5", null, "Back End"), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://flask.palletsprojects.com/en/1.1.x/",
+    target: "_blank"
+  }, "Flask")), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://www.djangoproject.com/",
+    target: "_blank"
+  }, "Django")), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://expressjs.com/",
+    target: "_blank"
+  }, "Express"))), react_1.default.createElement("div", {
+    className: "resume-item"
+  }, react_1.default.createElement("h5", null, "Database"), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://www.mysql.com/",
+    target: "_blank"
+  }, "MySQL")), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://www.postgresql.org/",
+    target: "_blank"
+  }, "PostgreSQL")), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://redis.io/",
+    target: "_blank"
+  }, "Redis"))), react_1.default.createElement("div", {
+    className: "resume-item"
+  }, react_1.default.createElement("h5", null, "Tooling"), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://aws.amazon.com/",
+    target: "_blank"
+  }, "AWS")), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://www.docker.com/",
+    target: "_blank"
+  }, "Docker")), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://git-scm.com/",
+    target: "_blank"
+  }, "Git")), react_1.default.createElement("p", {
+    className: "item"
+  }, react_1.default.createElement("a", {
+    href: "https://jenkins.io/",
+    target: "_blank"
+  }, "CI / CD")))));
 }
 
 exports.default = Resume;
