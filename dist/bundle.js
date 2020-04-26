@@ -35433,7 +35433,9 @@ function About(props) {
     document.title = 'About - DaRe';
     window.scrollTo(0, 0);
   }, []);
-  return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("p", null, "About"));
+  return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("h1", {
+    className: "h2"
+  }, "About me"));
 }
 
 exports.default = About;
@@ -35585,9 +35587,9 @@ function Resume(props) {
     window.scrollTo(0, 0);
   }, []);
   return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("h1", {
-    className: "h3"
+    className: "h2"
   }, "Resume"), react_1.default.createElement("h2", {
-    className: "h4"
+    className: "h3"
   }, "Experience"), react_1.default.createElement("div", {
     className: "experience",
     id: "experience"
@@ -35656,7 +35658,7 @@ function Resume(props) {
   }, "Worked with prepress, production and postpress operations with various types of jobs"), react_1.default.createElement("p", {
     className: "item"
   }, "Calibrated presses for color accuracy and proof color matching for clients"))), react_1.default.createElement("h2", {
-    className: "h4"
+    className: "h3"
   }, "Education"), react_1.default.createElement("div", {
     className: "education",
     id: "education"
@@ -35669,7 +35671,7 @@ function Resume(props) {
   }, "Graphic communication major"), react_1.default.createElement("p", {
     className: "item"
   }, "Web & digital media concentration"))), react_1.default.createElement("h2", {
-    className: "h4"
+    className: "h3"
   }, "Skills"), react_1.default.createElement("div", {
     className: "skills",
     id: "skills"

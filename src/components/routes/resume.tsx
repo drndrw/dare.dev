@@ -10,8 +10,8 @@ export default function Resume(props: any) {
 
   return (
     <>
-      <h1 className="h3">Resume</h1>
-      <h2 className="h4">Experience</h2>
+      <h1 className="h2">Resume</h1>
+      <h2 className="h3">Experience</h2>
       <div className="experience" id="experience">
         <div className="resume-item">
           <h5>Web Developer — <span className="italic">HelloSign, a Dropbox Company</span></h5>
@@ -52,7 +52,7 @@ export default function Resume(props: any) {
           <p className="item">Calibrated presses for color accuracy and proof color matching for clients</p>
         </div>
       </div>
-      <h2 className="h4">Education</h2>
+      <h2 className="h3">Education</h2>
       <div className="education" id="education">
         <div className="resume-item">
           <h5>Cal Poly, San Luis Obispo</h5>
@@ -61,7 +61,7 @@ export default function Resume(props: any) {
           <p className="item">Web & digital media concentration</p>
         </div>
       </div>
-      <h2 className="h4">Skills</h2>
+      <h2 className="h3">Skills</h2>
       <div className="skills" id="skills">
         <div className="resume-item">
           <h5>Languages</h5>

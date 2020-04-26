@@ -10,7 +10,7 @@ export default function About(props: any) {
 
   return (
     <>
-      <p>About</p>
+      <h1 className="h2">About me</h1>
     </>
   )
 }
