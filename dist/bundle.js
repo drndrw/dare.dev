@@ -35428,6 +35428,8 @@ Object.defineProperty(exports, "__esModule", {
 
 var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
+var react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+
 function About(props) {
   react_1.useEffect(function () {
     document.title = 'About - DaRe';
@@ -35435,7 +35437,77 @@ function About(props) {
   }, []);
   return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("h1", {
     className: "h2"
-  }, "About me"));
+  }, "About me"), react_1.default.createElement("p", null, "I'm a San Francisco bay area transplant working as a web developer at ", react_1.default.createElement("a", {
+    href: "https://www.hellosign.com"
+  }, "HelloSign, a Dropbox Company"), ". As a self taught engineer, I'm adept at learning new tech, and writing/ shipping code with quick turnaround times. My brief work experience has taught me to be comfortable with failing hard, fast and often, especially as it relates to my challenging work projects. As a consequence of that, I've shipped some pretty cool stuff, even if that came at the cost of a few bugs along the way."), react_1.default.createElement("h2", {
+    className: "h3"
+  }, "My background"), react_1.default.createElement("p", null, "I attended Cal Poly, San Luis Obispo with a major in Graphic Communication. After graduation, I moved to the San Francisco bay area to begin a career in production design, supporting the localization efforts for a large tech company. About six months into my role, I began to automate a few of our internal processes using my 101-level knowledge of Python. Since then, I've been learning and developing software to support a multitude use cases."), react_1.default.createElement("h2", {
+    className: "h3"
+  }, "My career"), react_1.default.createElement("p", null, "I've come a long way since the rudimentary Python scripts I wrote as a production designer. Here are a few examples (not a complete list) of what I've worked on professionally since then:"), react_1.default.createElement("h3", {
+    className: "h4"
+  }, "Apple (Welocalize)"), react_1.default.createElement("p", null, "While contacting at Apple, I developed several tools to facilitate automation and project tracking for a team of 15 people. My early projects included a Python-based diffing tool for comparing language-specific text strings, as well as a Python-based image QA tool, used to validate designer-produced images against a variable set of criteria. My biggest project was a real-time project tracking tool (think ", react_1.default.createElement("a", {
+    href: "https://trello.com/",
+    target: "_blank"
+  }, "Trello"), " or ", react_1.default.createElement("a", {
+    href: "https://www.atlassian.com/software/jira",
+    target: "_blank"
+  }, "Jira"), " for a very customized workflow), authored from scratch using ", react_1.default.createElement("a", {
+    href: "https://flask.palletsprojects.com/en/1.1.x/",
+    target: "_blank"
+  }, "Flask"), " (a Python-based web framework), ", react_1.default.createElement("a", {
+    href: "https://socket.io/",
+    target: "_blank"
+  }, "Socket.io"), ", Javascript and a ", react_1.default.createElement("a", {
+    href: "https://www.mysql.com/",
+    target: "_blank"
+  }, "MySQL database"), "."), react_1.default.createElement("h3", {
+    className: "h4"
+  }, "Atlassian"), react_1.default.createElement("p", null, "At Atlassian, I developed a series tools to support my team of web producers, and was an active participant in ", react_1.default.createElement("a", {
+    href: "https://www.atlassian.com/company/shipit",
+    target: "_blank"
+  }, "ShipIt"), ", Atlassian's quarterly internal hackathon. For my team, I developed a series of integrations between our marketing content management system, Jira and Confluence to produce status reports for pages across our marketing website. For ShipIt, I built the backend for a tool that helped visualize Jira data for Atlassian's creative team to assist with future work planning, as well as a tool that helped pair Atlassian employees with other employees that had similar interests, based on data collected from internal company blog posts. My biggest ShipIt project involved building the backend for ", react_1.default.createElement("a", {
+    href: "https://workopen.io",
+    target: "_blank"
+  }, "workopen.io"), ", a quiz that participants at Atlassian's 2018 Summit conference in Barcelona took to determine how open their teams were to change. As the quiz is given, participant response data is visualized on a line graph in real time. You can see Jay Simons, Atlassian's president, showcasing the quiz during his keynote speech ", react_1.default.createElement("a", {
+    href: "https://youtu.be/OLmk-UROdfs?t=526",
+    target: "_blank"
+  }, "here"), "."), react_1.default.createElement("p", null, "Atlassian exposed me to the world of Agile development (I obtained my ", react_1.default.createElement("a", {
+    href: "https://www.scrum.org/resources/what-is-a-scrum-master",
+    target: "_blank"
+  }, "scrum master"), " certification in 2018), and some advanced tooling like ", react_1.default.createElement("a", {
+    href: "https://www.docker.com/",
+    target: "_blank"
+  }, "Docker"), ", ", react_1.default.createElement("a", {
+    href: "https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment",
+    target: "_blank"
+  }, "CI/ CD"), " and various ", react_1.default.createElement("a", {
+    href: "https://en.wikipedia.org/wiki/Platform_as_a_service",
+    target: "_blank"
+  }, "PaaS"), " platforms. All of my projects at Atlassian were written using some combination of ", react_1.default.createElement("a", {
+    href: "https://flask.palletsprojects.com/en/1.1.x/",
+    target: "_blank"
+  }, "Flask"), ", ", react_1.default.createElement("a", {
+    href: "https://expressjs.com/",
+    target: "_blank"
+  }, "Express"), " (a ", react_1.default.createElement("a", {
+    href: "https://expressjs.com/",
+    target: "_blank"
+  }, "Node.js"), " web framework), ", react_1.default.createElement("a", {
+    href: "https://www.postgresql.org/",
+    target: "_blank"
+  }, "PostgresSQL"), ", Docker, and various frontend technologies."), react_1.default.createElement("h3", {
+    className: "h4"
+  }, "HelloSign (Dropbox)"), react_1.default.createElement("p", null, "At HelloSign, I wear several hats. In addition to my day-to-day development responsibilities, I serve as the informal product/ project manager for HelloSign's marketing website, working directly with internal and external stakeholders to deliver our online marketing presence."), react_1.default.createElement("p", null, "I am actively working on migrating our marketing website component library to ", react_1.default.createElement("a", {
+    href: "https://reactjs.org/",
+    target: "_blank"
+  }, "React"), " (with ", react_1.default.createElement("a", {
+    href: "https://redux.js.org/",
+    target: "_blank"
+  }, "Redux"), " for state management), and building a series of marketing-specific web applicatrions using a similar stack. I'm currently doing a lot of cool work that hasn't been released yet, so check back soon for some links :)."), react_1.default.createElement("h2", {
+    className: "h3"
+  }, "Get in touch"), react_1.default.createElement("p", null, "This is just a quick summary about me, my background and my projects. If you'd like to learn more or work with me, ", react_1.default.createElement(react_router_dom_1.Link, {
+    to: "/contact"
+  }, "feel free to reach out"), "."), ") }");
 }
 
 exports.default = About;
@@ -35668,9 +35740,9 @@ function Resume(props) {
     className: "italic location"
   }, "San Luis Obispo, CA"), react_1.default.createElement("p", {
     className: "item"
-  }, "Graphic communication major"), react_1.default.createElement("p", {
+  }, "Graphic Communication major"), react_1.default.createElement("p", {
     className: "item"
-  }, "Web & digital media concentration"))), react_1.default.createElement("h2", {
+  }, "Web & Digital Media concentration"))), react_1.default.createElement("h2", {
     className: "h3"
   }, "Skills"), react_1.default.createElement("div", {
     className: "skills",
@@ -35783,7 +35855,7 @@ function Resume(props) {
   }, "Git")), react_1.default.createElement("p", {
     className: "item"
   }, react_1.default.createElement("a", {
-    href: "https://jenkins.io/",
+    href: "https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment",
     target: "_blank"
   }, "CI / CD")))));
 }

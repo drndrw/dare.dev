@@ -57,8 +57,8 @@ export default function Resume(props: any) {
         <div className="resume-item">
           <h5>Cal Poly, San Luis Obispo</h5>
           <p className="italic location">San Luis Obispo, CA</p>
-          <p className="item">Graphic communication major</p>
-          <p className="item">Web & digital media concentration</p>
+          <p className="item">Graphic Communication major</p>
+          <p className="item">Web & Digital Media concentration</p>
         </div>
       </div>
       <h2 className="h3">Skills</h2>
@@ -96,7 +96,7 @@ export default function Resume(props: any) {
           <p className="item"><a href="https://aws.amazon.com/" target="_blank">AWS</a></p>
           <p className="item"><a href="https://www.docker.com/" target="_blank">Docker</a></p>
           <p className="item"><a href="https://git-scm.com/" target="_blank">Git</a></p>
-          <p className="item"><a href="https://jenkins.io/" target="_blank">CI / CD</a></p>
+          <p className="item"><a href="https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment" target="_blank">CI / CD</a></p>
         </div>
       </div>
     </>
