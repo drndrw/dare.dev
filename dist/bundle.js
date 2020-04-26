@@ -35433,6 +35433,9 @@ var react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_mod
 function About(props) {
   react_1.useEffect(function () {
     document.title = 'About - DaRe';
+    document.querySelector('meta[property="og:title"]').setAttribute("content", "About - DaRe");
+    document.querySelector('meta[name="description"]').setAttribute("content", "Read about my personal and professional engineering experience.");
+    document.querySelector('meta[property="og:description"]').setAttribute("content", "Read about my personal and professional engineering experience.");
     window.scrollTo(0, 0);
   }, []);
   return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("h1", {
@@ -35543,6 +35546,9 @@ var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/reac
 function Contact(props) {
   react_1.useEffect(function () {
     document.title = 'Contact - DaRe';
+    document.querySelector('meta[property="og:title"]').setAttribute("content", "Contact - DaRe");
+    document.querySelector('meta[name="description"]').setAttribute("content", "Reach out to me via email, or connect with me on LinkedIn.");
+    document.querySelector('meta[property="og:description"]').setAttribute("content", "Reach out to me via email, or connect with me on LinkedIn.");
     window.scrollTo(0, 0);
   }, []);
   return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("h1", {
@@ -35590,6 +35596,9 @@ var react_router_dom_1 = __webpack_require__(/*! react-router-dom */ "./node_mod
 function Home(props) {
   react_1.useEffect(function () {
     document.title = 'Andrew DaRe';
+    document.querySelector('meta[property="og:title"]').setAttribute("content", "Andrew DaRe");
+    document.querySelector('meta[name="description"]').setAttribute("content", "Full stack web developer, cat lover, sourdough bread baking enthusiast.");
+    document.querySelector('meta[property="og:description"]').setAttribute("content", "Full stack web developer, cat lover, sourdough bread baking enthusiast.");
     window.scrollTo(0, 0);
   }, []);
   return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("p", null, "Hey, I'm Andrew. I'm a software engineer, cat dad, Volkswagon bus owner and sourdough bread baking enthusiast. I'm currently a web developer at ", react_1.default.createElement("a", {
@@ -35663,6 +35672,9 @@ var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/reac
 function NotFound(props) {
   react_1.useEffect(function () {
     document.title = '404 - DaRe';
+    document.querySelector('meta[property="og:title"]').setAttribute("content", "404 - DaRe");
+    document.querySelector('meta[name="description"]').setAttribute("content", "Nothing to see here. Try again!");
+    document.querySelector('meta[property="og:description"]').setAttribute("content", "Nothing to see here. Try again!");
     window.scrollTo(0, 0);
   }, []);
   return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("h1", {
@@ -35709,6 +35721,9 @@ var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/reac
 function Resume(props) {
   react_1.useEffect(function () {
     document.title = 'Resume - DaRe';
+    document.querySelector('meta[property="og:title"]').setAttribute("content", "Resume - DaRe");
+    document.querySelector('meta[name="description"]').setAttribute("content", "Take a look at my resume, education and professional skills.");
+    document.querySelector('meta[property="og:description"]').setAttribute("content", "Take a look at my resume, education and professional skills.");
     window.scrollTo(0, 0);
   }, []);
   return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("h1", {

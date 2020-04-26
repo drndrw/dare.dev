@@ -5,6 +5,9 @@ export default function Resume(props: any) {
 
   useEffect (() => {
     document.title = 'Resume - DaRe';
+    document.querySelector('meta[property="og:title"]').setAttribute("content", "Resume - DaRe");
+    document.querySelector('meta[name="description"]').setAttribute("content", "Take a look at my resume, education and professional skills.");
+    document.querySelector('meta[property="og:description"]').setAttribute("content", "Take a look at my resume, education and professional skills.");
     window.scrollTo(0, 0);
   }, [])
 
