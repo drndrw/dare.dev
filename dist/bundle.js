@@ -35514,6 +35514,51 @@ exports.default = About;
 
 /***/ }),
 
+/***/ "./src/components/routes/contact.tsx":
+/*!*******************************************!*\
+  !*** ./src/components/routes/contact.tsx ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var __importStar = this && this.__importStar || function (mod) {
+  if (mod && mod.__esModule) return mod;
+  var result = {};
+  if (mod != null) for (var k in mod) {
+    if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+  }
+  result["default"] = mod;
+  return result;
+};
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
+
+function Contact(props) {
+  react_1.useEffect(function () {
+    document.title = 'Contact - DaRe';
+    window.scrollTo(0, 0);
+  }, []);
+  return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("h1", {
+    className: "h2"
+  }, "Contact me"), react_1.default.createElement("p", null, "If you'd like to learn more about my projects, or potentially work with me, shoot me an email at ", react_1.default.createElement("a", {
+    href: "mailto:andrew@dare.dev"
+  }, "andrew@dare.dev"), ", or ", react_1.default.createElement("a", {
+    href: "https://www.linkedin.com/in/andrewdare/",
+    target: "_blank"
+  }, "connect with me on LinkedIn"), "."));
+}
+
+exports.default = Contact;
+
+/***/ }),
+
 /***/ "./src/components/routes/home.tsx":
 /*!****************************************!*\
   !*** ./src/components/routes/home.tsx ***!
@@ -35567,7 +35612,7 @@ function Home(props) {
   }, "Flask"), ", ", react_1.default.createElement("a", {
     href: "https://www.djangoproject.com/",
     target: "_blank"
-  }, "Django"), "), and various tooling (", react_1.default.createElement("a", {
+  }, "Django"), "), various tooling (", react_1.default.createElement("a", {
     href: "https://webpack.js.org/",
     target: "_blank"
   }, "Webpack"), ", ", react_1.default.createElement("a", {
@@ -35576,7 +35621,7 @@ function Home(props) {
   }, "SASS"), ", ", react_1.default.createElement("a", {
     href: "https://www.docker.com/",
     target: "_blank"
-  }, "Docker"), "), just to name a few."), react_1.default.createElement("p", null, "Feel free to ", react_1.default.createElement(react_router_dom_1.Link, {
+  }, "Docker"), ") and more."), react_1.default.createElement("p", null, "Feel free to ", react_1.default.createElement(react_router_dom_1.Link, {
     to: "/about"
   }, "read more about me"), ", ", react_1.default.createElement(react_router_dom_1.Link, {
     to: "/resume"
@@ -35620,7 +35665,15 @@ function NotFound(props) {
     document.title = '404 - DaRe';
     window.scrollTo(0, 0);
   }, []);
-  return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("h1", null, "404"), react_1.default.createElement("p", null, "Not what you were looking for, sorry"));
+  return react_1.default.createElement(react_1.default.Fragment, null, react_1.default.createElement("h1", {
+    style: {
+      textAlign: 'center'
+    }
+  }, "404"), react_1.default.createElement("p", {
+    style: {
+      textAlign: 'center'
+    }
+  }, "Not what you were looking for, sorry"));
 }
 
 exports.default = NotFound;
@@ -36006,6 +36059,8 @@ var about_1 = __importDefault(__webpack_require__(/*! ./components/routes/about 
 
 var resume_1 = __importDefault(__webpack_require__(/*! ./components/routes/resume */ "./src/components/routes/resume.tsx"));
 
+var contact_1 = __importDefault(__webpack_require__(/*! ./components/routes/contact */ "./src/components/routes/contact.tsx"));
+
 var notfound_1 = __importDefault(__webpack_require__(/*! ./components/routes/notfound */ "./src/components/routes/notfound.tsx")); // Styles
 
 
@@ -36030,7 +36085,10 @@ function App() {
   }, React.createElement(about_1.default, null)), React.createElement(react_router_dom_1.Route, {
     exact: true,
     path: '/resume'
-  }, React.createElement(resume_1.default, null)), React.createElement(react_router_dom_1.Route, null, React.createElement(notfound_1.default, null)))), React.createElement(footer_1.default, null));
+  }, React.createElement(resume_1.default, null)), React.createElement(react_router_dom_1.Route, {
+    exact: true,
+    path: '/contact'
+  }, React.createElement(contact_1.default, null)), React.createElement(react_router_dom_1.Route, null, React.createElement(notfound_1.default, null)))), React.createElement(footer_1.default, null));
 }
 
 ReactDOM.render(React.createElement(react_redux_1.Provider, {
