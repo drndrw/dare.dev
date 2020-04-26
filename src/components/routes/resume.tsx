@@ -10,8 +10,8 @@ export default function Resume(props: any) {
 
   return (
     <>
-      <h1 className="h3">Resume</h1>
-      <h2 className="h4">Experience</h2>
+      <h1 className="h2">Resume</h1>
+      <h2 className="h3">Experience</h2>
       <div className="experience" id="experience">
         <div className="resume-item">
           <h5>Web Developer — <span className="italic">HelloSign, a Dropbox Company</span></h5>
@@ -52,16 +52,16 @@ export default function Resume(props: any) {
           <p className="item">Calibrated presses for color accuracy and proof color matching for clients</p>
         </div>
       </div>
-      <h2 className="h4">Education</h2>
+      <h2 className="h3">Education</h2>
       <div className="education" id="education">
         <div className="resume-item">
           <h5>Cal Poly, San Luis Obispo</h5>
           <p className="italic location">San Luis Obispo, CA</p>
-          <p className="item">Graphic communication major</p>
-          <p className="item">Web & digital media concentration</p>
+          <p className="item">Graphic Communication major</p>
+          <p className="item">Web & Digital Media concentration</p>
         </div>
       </div>
-      <h2 className="h4">Skills</h2>
+      <h2 className="h3">Skills</h2>
       <div className="skills" id="skills">
         <div className="resume-item">
           <h5>Languages</h5>
@@ -96,7 +96,7 @@ export default function Resume(props: any) {
           <p className="item"><a href="https://aws.amazon.com/" target="_blank">AWS</a></p>
           <p className="item"><a href="https://www.docker.com/" target="_blank">Docker</a></p>
           <p className="item"><a href="https://git-scm.com/" target="_blank">Git</a></p>
-          <p className="item"><a href="https://jenkins.io/" target="_blank">CI / CD</a></p>
+          <p className="item"><a href="https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment" target="_blank">CI / CD</a></p>
         </div>
       </div>
     </>
