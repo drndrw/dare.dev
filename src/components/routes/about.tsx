@@ -5,6 +5,9 @@ export default function About(props: any) {
 
   useEffect (() => {
     document.title = 'About - DaRe';
+    document.querySelector('meta[property="og:title"]').setAttribute("content", "About - DaRe");
+    document.querySelector('meta[name="description"]').setAttribute("content", "Read about my personal and professional engineering experience.");
+    document.querySelector('meta[property="og:description"]').setAttribute("content", "Read about my personal and professional engineering experience.");
     window.scrollTo(0, 0);
   }, [])
 

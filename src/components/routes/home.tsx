@@ -5,6 +5,9 @@ export default function Home(props: any) {
 
   useEffect (() => {
     document.title = 'Andrew DaRe';
+    document.querySelector('meta[property="og:title"]').setAttribute("content", "Andrew DaRe");
+    document.querySelector('meta[name="description"]').setAttribute("content", "Full stack web developer, cat lover, sourdough bread baking enthusiast.");
+    document.querySelector('meta[property="og:description"]').setAttribute("content", "Full stack web developer, cat lover, sourdough bread baking enthusiast.");
     window.scrollTo(0, 0);
   }, [])
 
