@@ -34,7 +34,7 @@ export default function About(props: any) {
       <p>At HelloSign, I wear several hats. In addition to my day-to-day development responsibilities, I serve as the informal product/ project manager for HelloSign's marketing website, working directly with internal and external stakeholders to deliver our online marketing presence.</p>
       <p>I am actively working on migrating our marketing website component library to <a href="https://reactjs.org/" target="_blank">React</a> (with <a href="https://redux.js.org/" target="_blank">Redux</a> for state management), and building a series of marketing-specific web applicatrions using a similar stack. I'm currently doing a lot of cool work that hasn't been released yet, so check back soon for some links :).</p>
       <h2 className="h3">Get in touch</h2>
-      <p>This is just a quick summary about me, my background and my projects. If you'd like to learn more or work with me, <Link to="/contact">feel free to reach out</Link>.
+      <p>This is just a quick summary about me, my background and my projects. If you'd like to learn more or work with me, <Link to="/contact">feel free to reach out</Link></p>.
     </>
   )
 }

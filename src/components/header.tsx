@@ -12,7 +12,7 @@ export default function Header(props: any) {
     <nav className={props.navState ? 'open' : ''}>
       <div className="container flex">
         <div className="left">
-          <Link to="/" className="h3" onClick={() => dispatch(toggleNav(false)}>DaRe</Link>
+          <Link to="/" className="h3" onClick={() => dispatch(toggleNav(false))}>DaRe</Link>
         </div>
         <div className="right">
           <Hamburger {...props} />
