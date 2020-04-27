@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import ReactGA from 'react-ga';
 
 export default function Contact(props: any) {
 
@@ -8,6 +9,7 @@ export default function Contact(props: any) {
     document.querySelector('meta[property="og:title"]').setAttribute("content", "Contact - DaRe");
     document.querySelector('meta[name="description"]').setAttribute("content", "Reach out to me via email, or connect with me on LinkedIn.");
     document.querySelector('meta[property="og:description"]').setAttribute("content", "Reach out to me via email, or connect with me on LinkedIn.");
+    ReactGA.ga('send', 'pageview', '/contact');
     window.scrollTo(0, 0);
   }, [])
 

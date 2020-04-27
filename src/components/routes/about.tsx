@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import ReactGA from 'react-ga';
 
 export default function About(props: any) {
 
@@ -8,6 +9,7 @@ export default function About(props: any) {
     document.querySelector('meta[property="og:title"]').setAttribute("content", "About - DaRe");
     document.querySelector('meta[name="description"]').setAttribute("content", "Read about my personal and professional engineering experience.");
     document.querySelector('meta[property="og:description"]').setAttribute("content", "Read about my personal and professional engineering experience.");
+    ReactGA.ga('send', 'pageview', '/about');
     window.scrollTo(0, 0);
   }, [])
 

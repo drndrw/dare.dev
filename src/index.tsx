@@ -3,6 +3,9 @@ import * as ReactDOM from "react-dom";
 import { reduxStore } from './store';
 import { Provider, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-164653308-1');
 
 // Components
 import Header from "./components/header";

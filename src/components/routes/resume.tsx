@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import ReactGA from 'react-ga';
 
 export default function Resume(props: any) {
 
@@ -8,6 +9,7 @@ export default function Resume(props: any) {
     document.querySelector('meta[property="og:title"]').setAttribute("content", "Resume - DaRe");
     document.querySelector('meta[name="description"]').setAttribute("content", "Take a look at my resume, education and professional skills.");
     document.querySelector('meta[property="og:description"]').setAttribute("content", "Take a look at my resume, education and professional skills.");
+    ReactGA.ga('send', 'pageview', '/resume');
     window.scrollTo(0, 0);
   }, [])
 
