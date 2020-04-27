@@ -10,7 +10,7 @@ function MenuItem(props: any) {
 
   return (
     <div className="container flex reverse">
-      <Link to={props.link} className="h4" onClick={() => dispatch(toggleNav(false)}>{props.name}</Link>
+      <Link to={props.link} className="h4" onClick={() => dispatch(toggleNav(false))}>{props.name}</Link>
     </div>
   )
 }

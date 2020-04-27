@@ -41,7 +41,6 @@ var prodConfig = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"]
   },
-  devtool: "source-map",
   module: {
     rules: [
       {
