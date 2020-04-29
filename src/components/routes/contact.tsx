@@ -16,7 +16,7 @@ export default function Contact(props: any) {
   return (
     <>
       <h1 className="h2">Contact me</h1>
-      <p>If you'd like to learn more about my projects, or potentially work with me, shoot me an email at <a href="mailto:andrew@dare.dev">andrew@dare.dev</a>, or <a href="https://www.linkedin.com/in/andrewdare/" target="_blank">connect with me on LinkedIn</a>.</p>
+      <p>If you'd like to learn more about my projects, or potentially work with me, shoot me an email at <a onClick={() => ReactGA.event({category: 'link-click', action: '/contact', label: 'andrew@dare.dev'})} href="mailto:andrew@dare.dev">andrew@dare.dev</a>, or <a onClick={() => ReactGA.event({category: 'link-click', action: '/contact', label: 'www.linkedin.com/in/andrewdare/'})} href="https://www.linkedin.com/in/andrewdare/" target="_blank">connect with me on LinkedIn</a>.</p>
     </>
   )
 }
