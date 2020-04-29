@@ -16,7 +16,7 @@ export default function Resume(props: any) {
   return (
     <>
       <h1 className="h2">Resume</h1>
-        <p>If you'd like to download a PDF copy, <a onClick={() => ReactGA.event({category: 'link-click', action: '/resume', label: 'resume.pdf'})} href="resume.pdf" target="_blank">click here</a>.</p>
+        <p>If you'd like to download a PDF copy of my resume, <a onClick={() => ReactGA.event({category: 'link-click', action: '/resume', label: 'resume.pdf'})} href="resume.pdf" target="_blank">click here</a>.</p>
       <h2 className="h3">Experience</h2>
       <div className="experience" id="experience">
         <div className="resume-item">

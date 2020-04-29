@@ -15,7 +15,7 @@ export default function NotFound(props: any) {
   return (
     <>
         <h1 style={{textAlign: 'center'}}>404</h1>
-        <p style={{textAlign: 'center'}}>Not what you were looking for, sorry</p>
+        <p style={{textAlign: 'center'}}>Not what you were looking for, sorry.</p>
     </>
   )
 }
