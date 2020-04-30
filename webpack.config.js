@@ -1,4 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var devConfig = {
   mode: "development",
@@ -28,6 +29,9 @@ var devConfig = {
   },
   plugins: [
     new ExtractTextPlugin('style.css'),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    })
   ]
 }
 
@@ -56,6 +60,9 @@ var prodConfig = {
   },
   plugins: [
     new ExtractTextPlugin('style.css'),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    })
   ]
 }
 
