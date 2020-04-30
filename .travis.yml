@@ -7,5 +7,6 @@ install:
 script:
   - echo "Testing the echo step"
   - npm run build:prod
-deploy:
-  - echo "Deploy to S3 phase"
+  - ls
+  - cd dist
+  - ls
