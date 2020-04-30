@@ -6,3 +6,4 @@ install:
   - npm install
 script:
   - echo "Testing the echo step"
+  - npm run build:prod
