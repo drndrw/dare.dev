@@ -1,5 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 var devConfig = {
   mode: "development",
@@ -31,7 +32,13 @@ var devConfig = {
     new ExtractTextPlugin('style.css'),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    })
+    }),
+    new CopyPlugin([
+      {from: 'src/sitemap.xml', to: 'sitemap.xml'},
+      {from: 'src/robots.txt', to: 'robots.txt'},
+      {from: 'src/assets/resume.pdf', to: 'resume.pdf'},
+      {from: 'src/assets/img', to: 'img'}
+    ]),
   ]
 }
 
@@ -62,7 +69,13 @@ var prodConfig = {
     new ExtractTextPlugin('style.css'),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    })
+    }),
+    new CopyPlugin([
+      {from: 'src/sitemap.xml', to: 'sitemap.xml'},
+      {from: 'src/robots.txt', to: 'robots.txt'},
+      {from: 'src/assets/resume.pdf', to: 'resume.pdf'},
+      {from: 'src/assets/img', to: 'img'}
+    ]),
   ]
 }
 
