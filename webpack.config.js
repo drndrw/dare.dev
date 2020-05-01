@@ -7,7 +7,7 @@ var devConfig = {
   watch: true,
   entry: "./src/index.tsx",
   output: {
-    filename: "bundle.js",
+    filename: "bundle.[contenthash].js",
     path: __dirname + "/dist"
   },
   resolve: {
@@ -29,7 +29,7 @@ var devConfig = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
+    new ExtractTextPlugin({filename: 'style.css'}),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
@@ -46,7 +46,7 @@ var prodConfig = {
   mode: "production",
   entry: "./src/index.tsx",
   output: {
-    filename: "bundle.js",
+    filename: "bundle.[contenthash].js",
     path: __dirname + "/dist"
   },
   resolve: {
@@ -66,7 +66,7 @@ var prodConfig = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
+    new ExtractTextPlugin({filename: 'style.css}'}),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),
