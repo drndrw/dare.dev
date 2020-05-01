@@ -35,7 +35,7 @@ var devConfig = {
     }),
     new CopyPlugin([
       {from: 'src/sitemap.xml', to: 'sitemap.xml'},
-      {from: 'src/robots.txt', to: 'robots.txt'},
+      {from: 'src/robots.dev.txt', to: 'robots.txt'},
       {from: 'src/assets/resume.pdf', to: 'resume.pdf'},
       {from: 'src/assets/img', to: 'img'}
     ]),
@@ -72,7 +72,7 @@ var prodConfig = {
     }),
     new CopyPlugin([
       {from: 'src/sitemap.xml', to: 'sitemap.xml'},
-      {from: 'src/robots.txt', to: 'robots.txt'},
+      {from: 'src/robots.prod.txt', to: 'robots.txt'},
       {from: 'src/assets/resume.pdf', to: 'resume.pdf'},
       {from: 'src/assets/img', to: 'img'}
     ]),
