@@ -9,9 +9,5 @@ node_js:
 install:
   - npm install
 script:
-  - echo "test echo command development"
-    on:
-      branch: development
-  - echo "test echo command master"
-    on:
-      branch: master
+  - echo $TRAVIS_BRANCH
+  - echo "branch name^^"
