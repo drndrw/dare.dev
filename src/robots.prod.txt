@@ -1,3 +1,2 @@
 User-agent: *
-
 Sitemap: https://www.dare.dev/sitemap.xml

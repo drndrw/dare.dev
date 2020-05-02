@@ -1,11 +1,13 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 var devConfig = {
   mode: "development",
   watch: true,
   entry: "./src/index.tsx",
   output: {
-    filename: "bundle.js",
+    filename: "bundle.[contenthash].js",
     path: __dirname + "/dist"
   },
   resolve: {
@@ -15,19 +17,55 @@ var devConfig = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
-        })
+        test: /\.module\.s(a|c)ss$/,
+        loader: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.s(a|c)ss$/,
+        exclude: /\.module.(s(a|c)ss)$/,
+        loader: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
       },
       { test: /\.tsx?$/, loader: "babel-loader" },
-      { test: /\.tsx?$/, loader: "ts-loader" },
-      { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
+      { test: /\.tsx?$/, loader: "ts-loader" }
     ]
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
+    new MiniCssExtractPlugin({
+      filename: 'style.css'
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    }),
+    new CopyPlugin([
+      {from: 'src/sitemap.xml', to: 'sitemap.xml'},
+      {from: 'src/robots.dev.txt', to: 'robots.txt'},
+      {from: 'src/assets/resume.pdf', to: 'resume.pdf'},
+      {from: 'src/assets/img', to: 'img'}
+    ]),
   ]
 }
 
@@ -35,7 +73,7 @@ var prodConfig = {
   mode: "production",
   entry: "./src/index.tsx",
   output: {
-    filename: "bundle.js",
+    filename: "bundle.[contenthash].js",
     path: __dirname + "/dist"
   },
   resolve: {
@@ -44,18 +82,55 @@ var prodConfig = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader']
-        })
+        test: /\.module\.s(a|c)ss$/,
+        loader: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              sourceMap: true
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true
+            }
+          }
+        ]
+      },
+      {
+        test: /\.s(a|c)ss$/,
+        exclude: /\.module.(s(a|c)ss)$/,
+        loader: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: false
+            }
+          }
+        ]
       },
       { test: /\.tsx?$/, loader: "babel-loader" },
       { test: /\.tsx?$/, loader: "ts-loader" }
     ]
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
+    new MiniCssExtractPlugin({
+      filename: 'style.[hash].css'
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    }),
+    new CopyPlugin([
+      {from: 'src/sitemap.xml', to: 'sitemap.xml'},
+      {from: 'src/robots.prod.txt', to: 'robots.txt'},
+      {from: 'src/assets/resume.pdf', to: 'resume.pdf'},
+      {from: 'src/assets/img', to: 'img'}
+    ]),
   ]
 }
 

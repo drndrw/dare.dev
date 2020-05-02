@@ -1,0 +1,16 @@
+language: node_js
+sudo: false
+branches:
+  only:
+    - development
+    - master
+node_js:
+  - 8
+install:
+  - npm install
+script:
+  - echo "Testing the echo step"
+  - npm run build:prod
+  - ls
+  - cd dist
+  - ls
