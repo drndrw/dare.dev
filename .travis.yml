@@ -8,6 +8,8 @@ node_js:
   - 8
 install:
   - npm install
+  - if [ $TRAVIS_BRANCH == 'master' ] then npm run build:prod else npm run build:dev fi
 script:
+  - ls
   - echo $TRAVIS_BRANCH
   - echo "branch name^^"
