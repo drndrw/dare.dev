@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:dev": "webpack --mode=development",
+    "build:stg": "webpack --mode=none",
     "build:prod": "webpack --mode=production",
     "docker:build": "docker build -t dare .",
     "docker:run": "docker run -p 3000:3000 dare"
