@@ -9,8 +9,12 @@ node_js:
 install:
   - npm install
 script:
-  - echo "Testing the echo step"
-  - npm run build:prod
-  - ls
-  - cd dist
-  - ls
+  if: branch = master
+  - echo "Building from master"
+  if: branch = development
+  - echo "Building from development"
+  # - echo "Testing the echo step"
+  # - npm run build:prod
+  # - ls
+  # - cd dist
+  # - ls
