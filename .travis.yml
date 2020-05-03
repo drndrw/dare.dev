@@ -17,5 +17,6 @@ deploy:
   bucket: "stg.dare.dev"
   skip_cleanup: true
   local_dir: dist
+  region: us-west-1
   on:
     branch: development
