@@ -12,3 +12,11 @@ script:
   - if [[ "$TRAVIS_BRANCH" == "master" ]]; then npm run build:prod; else npm run build:stg; fi
   - cd dist
   - ls
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  bucket: "stg.dare.dev"
+  skip_cleanup: true
+  on:
+    branch: development
