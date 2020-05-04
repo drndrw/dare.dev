@@ -9,8 +9,25 @@ node_js:
 install:
   - npm install
 script:
-  - echo "Testing the echo step"
-  - npm run build:prod
-  - ls
-  - cd dist
-  - ls
+  - if [[ "$TRAVIS_BRANCH" == "master" ]]; then npm run build:prod; else npm run build:stg; fi
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: "stg.dare.dev"
+    skip_cleanup: true
+    local_dir: dist
+    region: us-west-1
+    on:
+      branch: development
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
+    bucket: "dare.dev"
+    skip_cleanup: true
+    local_dir: dist
+    region: us-west-1
+    on:
+      branch: master
+after_deploy:
+  - travis-ci-cloudfront-invalidation -a $AWS_ACCESS_KEY -s $AWS_SECRET_KEY -c $CLOUDFRONT_ID -i '/*' -b $TRAVIS_BRANCH -p $TRAVIS_PULL_REQUEST -o 'master,development'
